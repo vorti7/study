@@ -1,0 +1,46 @@
+// 컬렉션 프레임워크
+
+// Student 클래스는 Name, Age 속성을 가지며, 딕셔너리 객체에 저장된 세 명의 학생들
+// (홍길동(20세), 이순신(30세), 강감찬(25세))의 평균 나이를 구하는 프로그램을 작성하십시오.
+
+//[출력]
+//학생의 평균 나이: 25
+
+import java.util.HashMap;
+import java.util.Map;
+
+public class Main{
+
+	public static void main(String[] args) {
+
+		Map<Integer, Student> students = new HashMap<Integer, Student>();
+
+        Student s1 = new Student();
+        s1.name = "홍길동";
+        s1.age = 20;
+        Student s2 = new Student();
+        s2.name = "이순신";
+        s2.age = 30;
+        Student s3 = new Student();
+        s3.name = "강감찬";
+        s3.age = 25;
+
+        students.put(1, s1);
+        students.put(2, s2);
+        students.put(3, s3);
+
+        int totalAge = 0;
+        for (Student student : students.values())
+        {
+            totalAge += student.age;
+        }
+
+        System.out.println("학생의 평균 나이: " + totalAge/students.size());
+	}
+
+}
+class Student
+{
+	public int age;
+	public String name;
+}

@@ -1,0 +1,41 @@
+public class Main{
+	public static void main(String[] args) {
+				Calc c1 = new Calc(3.14, 5);
+        c1.displayResult();
+	}
+}
+class Calc
+{
+    double doubValue1, doubValue2;
+    double plusRst, minusRst, mulRst, divRst;
+    public Calc(double value1, double value2)
+    {
+        doubValue1 = value1;
+        doubValue2 = value2;
+        plus(doubValue1, doubValue2);
+        minus(doubValue1, doubValue2);
+        multiply(doubValue1, doubValue2);
+        divide(doubValue1, doubValue2);
+    }
+    public void plus(double doubValue1, double doubValue2)
+    {
+        plusRst = doubValue1 + doubValue2;
+    }
+    public void minus(double doubValue1, double doubValue2)
+    {
+        minusRst = doubValue1 - doubValue2;
+    }
+    public void multiply(double doubValue1, double doubValue2)
+    {
+        mulRst = doubValue1 * doubValue2;
+    }
+    public void divide(double doubValue1, double doubValue2)
+    {
+        divRst = doubValue1 / doubValue2;
+    }
+    public void displayResult()
+    {
+        System.out.printf("덧셈결과:%.2f, 뺄셈결과:%.2f, 곱셈결과:%.2f, 나눗셈결과:%.2f\n", plusRst, minusRst, mulRst, divRst);
+    }
+}
+

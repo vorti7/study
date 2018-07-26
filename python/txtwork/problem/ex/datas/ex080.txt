@@ -1,0 +1,22 @@
+import java.util.Scanner;
+public class Main{
+	public static void main(String[] args) {
+				Scanner scanner = new Scanner(System.in);
+				int i, j, spc, rows, k, t = 1;
+        System.out.print("행의 수 : ");
+        rows = scanner.nextInt();
+        spc = rows + 4 - 1;
+        for (i = 1; i <= rows; i++)
+        {
+            for (k = spc; k >= 1; k--)
+            {
+                System.out.print(" ");
+            }
+            for (j = 1; j <= i; j++)
+                System.out.printf("%d ", t++);
+            System.out.println();
+            spc--;
+        }
+	}
+}
+

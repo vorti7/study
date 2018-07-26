@@ -1,0 +1,27 @@
+import java.util.Scanner;
+public class Main{
+	public static void main(String[] args) {
+				Scanner scanner = new Scanner(System.in);
+				String username, password;
+        int ctr = 0;
+        System.out.println("기본 사용자명과 암호는 abcd와 1234입니다.");
+        System.out.println("------------------------------------------------------");
+        do
+        {
+            System.out.print("username: ");
+            username = scanner.nextLine();
+            System.out.print("password: ");
+            password = scanner.nextLine();
+            if (!username.equals("abcd") || !password.equals("1234"))
+                ctr++;
+            else
+                ctr = 1;
+        }
+        while ((!username.equals("abcd") || !password.equals("1234")) && (ctr != 3));
+        if (ctr == 3)
+            System.out.print("\n3회 이상 로그인을 시도하였습니다. 잠시 후 다시 이용하십시오!\n\n");
+        else
+            System.out.println("\n정상 로그인 하였습니다!\n\n");
+	}
+}
+

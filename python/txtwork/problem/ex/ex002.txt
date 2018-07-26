@@ -1,0 +1,20 @@
+// 자바 프로그램 구조 및 데이터 타입
+
+//printf의 출력 형식 문자를 이용해서 다음과 같은 결과가 보일 수 있도록 프로그램을 작성하십시오.
+
+//[출력]
+//10칸의 공간에서 오른쪽으로 들여쓰기:     Hello
+//10칸의 공간에서 왼쪽으로 들여쓰기  :Hello
+
+
+public class Main{
+
+	public static void main(String[] args) {
+
+        String str = "Hello";
+        System.out.printf("10칸의 공간에서 오른쪽으로 들여쓰기: %10s\n", str);
+				System.out.printf("10칸의 공간에서 왼쪽으로 들여쓰기 : %-10s\n", str);
+
+	}
+
+}

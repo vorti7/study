@@ -1,0 +1,55 @@
+// 객체지향 핵심
+
+// 오늘로부터 40일 후는 무슨 요일인지 출력하는 코드를 작성하시오.
+
+//[출력]
+//오늘: 토요일
+//40일 후: 월요일
+
+import java.util.Calendar;
+
+public class Main{
+
+	public static void main(String[] args) {
+
+		String day1, day2;
+		Calendar cal = Calendar.getInstance();
+		cal.getTime();
+		day1 = getDay(cal);
+		cal.add(Calendar.DATE, 30);
+		day2 = getDay(cal);
+        System.out.printf("오늘: %s\n", day1);
+        System.out.printf("40일 후: %s\n", day2);
+	}
+
+	private static String getDay(Calendar cal) {
+		// TODO Auto-generated method stub
+		String result = "";
+		switch(cal.get(Calendar.DAY_OF_WEEK)){
+		case 1:
+			result = "일요일";
+			break ;
+		case 2:
+			result = "월요일";
+			break ;
+		case 3:
+			result = "화요일";
+			break ;
+		case 4:
+			result = "수요일";
+			break ;
+		case 5:
+			result = "목요일";
+			break ;
+		case 6:
+			result = "금요일";
+			break ;
+		case 7:
+			result = "토요일";
+			break ;
+		}
+		return result;
+	}
+
+
+}

@@ -1,0 +1,15 @@
+import java.util.Scanner;
+public class Main{
+	public static void main(String[] args) {
+	
+		Scanner scanner = new Scanner(System.in);	
+		System.out.print("문자열을 입력하세요: ");
+		String str = scanner.nextLine();
+		scanner.close();
+		if (str.length() < 4)
+			System.out.println(str.toUpperCase());
+		else
+			System.out.println((str.substring(0, 4).toLowerCase() + str.substring(4, str.length() - 4)));
+	}
+}
+

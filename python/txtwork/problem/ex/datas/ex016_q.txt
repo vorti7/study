@@ -1,0 +1,4 @@
+ Java 객체지향 I
+ 사칙연산(Plus, Minus, Multiply, Divide)과 결과 출력 기능(DisplayResult)을 지원하는 Calc 클래스를 정의하고,
+ 3.14와 5로 초기화되면서 사칙연산의 결과를 저장한 Calc 객체에 대해 결과를 다음과 같이 출력하는 객체지향 프로그램을 작성하십시오.
+

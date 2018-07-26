@@ -1,0 +1,14 @@
+import java.util.Arrays;
+public class Main{
+	public static void main(String[] args) {
+				int[] array1 = { 1, 2, 5 };
+        System.out.printf("array1: %s\n", Arrays.toString(array1));
+        int[] array2 = { 0, 3, 8 };
+        System.out.printf("array2: %s\n", Arrays.toString(array2));
+        int[] array3 = { -1, 0, 2 };
+        System.out.printf("array3: %s\n", Arrays.toString(array3));
+        int[] new_array = { array1[1], array2[1], array3[1] };
+        System.out.printf("new_Array: %s\n", Arrays.toString(new_array));
+	}
+}
+

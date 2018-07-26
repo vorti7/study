@@ -1,0 +1,20 @@
+import java.util.Scanner;
+public class Main{
+	public static void main(String[] args) {
+		double doubValue1, doubValue2;
+    String strValue1, strValue2;
+    Scanner scanner = new Scanner(System.in);
+    System.out.print("1번째 값을 입력하세요:");
+    strValue1 = scanner.nextLine();
+    System.out.printf("2번째 값을 입력하세요:");
+    strValue2 = scanner.nextLine();
+    doubValue1 = Double.parseDouble(strValue1);
+    doubValue2 = Double.parseDouble(strValue2);
+    scanner.close();
+    System.out.printf("%.2f+%.2f=%.2f\n", doubValue1, doubValue2, doubValue1 + doubValue2);
+    System.out.printf("%.2f-%.2f=%.2f\n", doubValue1, doubValue2, doubValue1 - doubValue2);
+    System.out.printf("%.2f*%.2f=%.2f\n", doubValue1, doubValue2, doubValue1 * doubValue2);
+    System.out.printf("%.2f/%.2f=%.2f\n", doubValue1, doubValue2, doubValue1 / doubValue2);
+	}
+}
+

@@ -1,0 +1,21 @@
+import java.util.ArrayList;
+import java.util.List;
+public class Main{
+	public static void main(String[] args) {
+				String line = "Don't worry, be happy";
+				System.out.println("원본 문자열: " + line);
+        String result = "";
+        List<String> wordsList = new ArrayList<String>();
+        String[] words = line.split(" ");
+        for (int i = words.length - 1; i >= 0; i--)
+        {
+            result += words[i] + " ";
+        }
+        wordsList.add(result);
+        for (String s : wordsList)
+        {
+        	System.out.println("\n역순 문자열: " + s);
+        }
+	}
+}
+

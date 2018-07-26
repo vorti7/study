@@ -1,0 +1,47 @@
+// C#의 객체지향
+
+// 3차원 공간의 좌표 x, y, z를 저장하고 좌표를 이동하는 Move 메서드를 가진 Coord3D 클래스를 정의합니다. 
+// 이 Coord3D 클래스의 객체를 이용해서 아래와 같은 출력이 이루어지도록 프로그램을 작성하십시오. 
+
+//[출력]
+//초기좌표값:(3,4,7)
+//좌표이동:(+3,-5,+1)
+//변경후 좌표값:(6,-1,8)
+
+
+public class Main{
+	
+	public static void main(String[] args) {
+        
+		Coord3D c1 = new Coord3D(3, 4, 7);
+
+        System.out.printf("초기좌표값: (%d,%d,%d)\n", c1.x, c1.y, c1.z);
+        System.out.println("좌표이동:(+3,-5,+1)");
+
+        c1.move(3, -5, 1);
+
+        System.out.printf("변경후 좌표값: (%d,%d,%d)\n", c1.x, c1.y, c1.z);
+        
+	}
+
+}
+
+class Coord3D
+{
+    public int x, y, z;
+
+    public Coord3D(int x, int y, int z)
+    {
+        this.x = x;
+        this.y = y;
+        this.z = z;
+    }
+
+    public void move(int x, int y, int z)       
+    {
+        this.x = this.x + x;
+        this.y = this.y + y;
+        this.z = this.z + z;
+    }
+}
+

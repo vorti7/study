@@ -1,0 +1,14 @@
+public class Main{
+	public static void main(String[] args) {
+		System.out.println(removeChar("abcdefghijklmn", 1));
+		System.out.println(removeChar("abcdefghijklmn", 9));
+		System.out.println(removeChar("abcdefghijklmn", 0));
+	}
+	public static String removeChar(String str, int n)
+    {
+				StringBuilder sb = new StringBuilder(str);
+				sb.delete(n, n+1);
+        return sb.toString();
+    }
+}
+

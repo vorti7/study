@@ -1,0 +1,32 @@
+// 문자열
+
+// 문자열 객체와 인덱스를 입력으로 전달받는 클래스 메서드 removeChar 메서드를 정의히고, 
+// "abcdefghijklmn" 문자열에서 각각 두 번째, 열 번째, 첫 번째 항목을 제거한 결과를 출력하는 
+// 프로그램을 작성하십시오.
+
+//[출력]
+//acdefghijklmn
+//abcdefghiklmn
+//bcdefghijklmn
+
+
+
+
+public class Main{
+	
+	public static void main(String[] args) {
+        
+		System.out.println(removeChar("abcdefghijklmn", 1));
+		System.out.println(removeChar("abcdefghijklmn", 9));
+		System.out.println(removeChar("abcdefghijklmn", 0));
+	}
+
+	public static String removeChar(String str, int n)
+    {
+		StringBuilder sb = new StringBuilder(str);
+		sb.delete(n, n+1);
+        return sb.toString();
+    }
+}
+
+

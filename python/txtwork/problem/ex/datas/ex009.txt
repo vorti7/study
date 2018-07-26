@@ -1,0 +1,19 @@
+import java.util.Scanner;
+public class Main{
+	public static void main(String[] args) {
+		int i = 0;
+        int j = 0;
+        int[] myArray;
+        myArray = new int[8];
+        for (i = 0; i < myArray.length; i++)
+        {
+            System.out.printf("%d번째 숫자를 입력 하세요.\n", i+1);
+            myArray[i] = Integer.parseInt(new Scanner(System.in).nextLine());
+        }
+        for (j = myArray.length - 1; j >= 0; j--)
+        {
+            System.out.println(myArray[j]);
+        }
+	}
+}
+

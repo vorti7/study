@@ -1,0 +1,52 @@
+// 자바 연산자 및 배열
+
+// 거리(미터), 시간(시, 분, 초) 정보를 입력 받아 속도(m/s, km/h, m/h)를 구하는 프로그램을 작성하십시오.
+// mph는 kph x 1.609입니다.
+
+//[입력]
+//20000
+//0
+//50
+//0
+//[출력]
+//속도(m/s) is 6.666667
+//속도(km/h) is 24
+//속도(miles/h) is 14.9161
+
+import java.text.DecimalFormat;
+import java.util.Scanner;
+
+public class Main{
+
+	public static void main(String[] args) {
+
+				Scanner scanner = new Scanner(System.in);
+				float distance;
+        float hour, min, sec;
+
+        float timeSec;
+        float mps;
+        float kph, mph;
+
+        System.out.println("거리(미터): ");
+        distance = scanner.nextFloat();
+        System.out.println("시간(시): ");
+        hour = scanner.nextFloat();
+        System.out.println("시간(분): ");
+        min = scanner.nextFloat();
+        System.out.println("시간(초): ");
+        sec = scanner.nextFloat();
+
+        timeSec = (hour * 3600) + (min * 60) + sec;
+        mps = distance / timeSec;
+        kph = (distance / 1000.0f) / (timeSec / 3600.0f);
+        mph = kph / 1.609f;
+
+        DecimalFormat decimalFormat = new DecimalFormat("#.######");
+        System.out.printf("속도(m/s) is %s\n", decimalFormat.format(mps));
+        System.out.printf("속도(km/h) is %s\n", decimalFormat.format(kph));
+        System.out.printf("속도(m/h) is %s\n", decimalFormat.format(mph));
+
+	}
+
+}

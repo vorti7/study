@@ -1,0 +1,36 @@
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.Scanner;
+import java.util.concurrent.TimeUnit;
+public class Main{
+	public static void main(String[] args) {
+				String startday = null;
+        String today = null;
+        long deposit = 0;
+        double interest = 0;
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("저축 시작 날짜를 입력하세요.(YYYYMMDD형식)");
+        startday = scanner.nextLine();
+        System.out.print("오늘 날짜를 입력하세요.(YYYYMMDD형식)");
+        today = scanner.nextLine();
+        System.out.print("저축 금액을 입력하세요.(원 단위)");
+        deposit = Long.parseLong(scanner.nextLine());
+        scanner.close();
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyyMMdd");
+				try {
+					Date firstDate = sdf.parse(startday);
+					Date secondDate = sdf.parse(today);
+					long diffInMillies = Math.abs(secondDate.getTime() - firstDate.getTime());
+	        long diff = TimeUnit.DAYS.convert(diffInMillies, TimeUnit.MILLISECONDS);
+	        interest = ((double)diff / 365) * (0.02) * deposit;
+	        System.out.println();
+	        System.out.printf("날짜 차이는 %d일 입니다.\n", diff);
+	        System.out.printf("현재까지의 이자는 %d원 입니다.\n", Math.round(interest));
+	        System.out.printf("현재까지의 통장금액은 %d원 입니다.\n", Math.round(interest + deposit));
+				} catch (ParseException e) {
+					e.printStackTrace();
+				}
+	}
+}
+

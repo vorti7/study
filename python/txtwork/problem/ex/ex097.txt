@@ -1,0 +1,31 @@
+// 컬렉션 프레임워크
+
+// 사과, 바나나, 수빅을 키로 하고, 2, 5, 1의 각각의 수량을 값으로 하는 딕셔너리 객체를 생성하고,
+// 이들의 총 수량을 구하는 프로그램을 작성하십시오.
+
+//[출력]
+//총 수량: 8
+
+import java.util.HashMap;
+import java.util.Map;
+
+public class Main{
+
+	public static void main(String[] args) {
+
+				Map<String, Integer> fruits = new HashMap<String, Integer>();
+
+        fruits.put("사과", 2);
+        fruits.put("바나나", 5);
+        fruits.put("수박", 1);
+
+        int quantities = 0;
+        for (int value : fruits.values())
+        {
+            quantities += value;
+        }
+
+        System.out.println("총 수량: "+quantities);
+	}
+
+}

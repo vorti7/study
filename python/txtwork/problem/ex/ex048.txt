@@ -1,0 +1,26 @@
+// 자바 제어문
+
+// 배열 [1, 2, 5, 7, 8]의 첫 번째 항목과 마지막 항목까지 가장 큰 숫자를 찾아 출력하는 프로그램을 작성하십시오.
+
+//[출력]
+//8
+
+import java.util.Arrays;
+
+public class Main{
+
+	public static void main(String[] args) {
+
+				int[] nums = { 1, 2, 5, 7, 8 };
+        System.out.printf("nums: %s\n", Arrays.toString(nums));
+        int h_val = nums[0];
+        for (int i = 0; i < nums.length; i++)
+        {
+            if (nums[i] > nums[0])
+                h_val = nums[i];
+        }
+        System.out.println(h_val);
+
+	}
+
+}

@@ -1,0 +1,28 @@
+// 자바 연산자 및 배열
+
+// 반지름을 입력받아 원의 면적을 구하는 프로그램을 작성하십시오.
+
+//[입력]
+//5
+//[출력]
+//78.53982
+
+import java.util.Scanner;
+
+public class Main{
+
+	public static void main(String[] args) {
+
+		Scanner scanner = new Scanner(System.in);
+		float r;
+        float pi = 3.1415926535f;
+
+        System.out.println("반지름: ");
+        r = scanner.nextFloat();
+
+        System.out.println(pi * (r * r));
+        
+	}
+	
+}
+

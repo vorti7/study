@@ -1,0 +1,46 @@
+// 객체지향 핵심
+
+// 입력받은 두 숫자의 GCD와 LCM을 출력하는 프로그램을 작성하십시오.
+
+//[입력]
+//25
+//10
+//[결과]
+//25와 10의 GCD: 5
+//25와 10의 LCM: 50
+
+import java.util.Scanner;
+
+
+public class Main{
+
+	public static void main(String[] args) {
+
+				Scanner scanner = new Scanner(System.in);
+				long num1, num2, hcf, lcm;
+        System.out.print("첫 번째  숫자 : ");
+        num1 = scanner.nextInt();
+        System.out.print("두 번째 숫자 : ");
+        num2 = scanner.nextInt();
+
+        hcf = fcd(num1, num2);
+        lcm = (num1 * num2) / hcf;
+
+        System.out.printf("\n %d와 %d의 GCD: %d ", num1, num2, hcf);
+        System.out.printf(" %d와 %d의 LCM: %d\n", num1, num2, lcm);
+	}
+
+	private static long fcd(long n1, long n2) {
+		// TODO Auto-generated method stub
+		if (n2 == 0)
+        {
+            return n1;
+        }
+        else
+        {
+            return Gcd(n2, n1 % n2);
+        }
+	}
+
+
+}

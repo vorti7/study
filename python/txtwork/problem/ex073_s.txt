@@ -1,0 +1,17 @@
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
+import java.text.SimpleDateFormat;
+import java.time.DayOfWeek;
+import java.util.Calendar;
+import java.util.GregorianCalendar;
+public class Main{
+    public static void main(String[] args) {
+        GregorianCalendar cal = (GregorianCalendar) Calendar.getInstance();
+        cal.set(2018, 0, 5);
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+        DayOfWeek dayOfWeek = DayOfWeek.of(cal.get(Calendar.DAY_OF_WEEK) - 1);
+        System.out.printf("%s => %s", sdf.format(cal.getTime()), dayOfWeek);
+    }
+}
+

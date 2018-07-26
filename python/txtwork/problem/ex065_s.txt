@@ -1,0 +1,31 @@
+import java.util.Scanner;
+public class Main{
+	public static void main(String[] args) {
+		Scanner scanner = new Scanner(System.in);
+		String str;
+        char[] arr1;
+        char ch;
+        int i, j, l;
+        System.out.println("문자열을 입력하세요 : ");
+        str = scanner.nextLine();
+        l = str.length();
+        arr1 = str.substring(0, l).toCharArray();
+        for (i = 1; i < l; i++)
+            for (j = 0; j < l - i; j++)
+                if (arr1[j] > arr1[j + 1])
+                {
+                    ch = arr1[j];
+                    arr1[j] = arr1[j + 1];
+                    arr1[j + 1] = ch;
+                }
+        System.out.println("정렬 후 :");
+        for(char c : arr1)
+        {
+            ch = c;
+            System.out.printf("%c ", ch);
+        }
+        System.out.println();
+	}
+	
+}
+

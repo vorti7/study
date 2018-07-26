@@ -1,0 +1,57 @@
+import java.util.Scanner;
+public class Main{
+	public static void main(String[] args) {
+        
+		int point = 0; ;
+        String result = null;
+        String kresult = null;
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("시험점수를 입력 하세요.");
+        point = Integer.parseInt(scanner.nextLine());
+        scanner.close();
+        if (point > 90)
+        {
+            result = "A";
+        }
+        else if (point > 80)
+        {
+            result = "B";
+        }
+        else if (point > 70)
+        {
+            result = "C";
+        }
+        else if (point > 60)
+        {
+            result = "D";
+        }
+        else
+        {
+            result = "F";
+        }
+        
+        switch (result)
+        {
+            case "A":
+                kresult = "수";
+                break;
+            case "B":
+                kresult = "우";
+                break;
+            case "C":
+                kresult = "미";
+                break;
+            case "D":
+                kresult = "양";
+                break;
+            default:
+                kresult = "가";
+                break;
+        }
+        
+        System.out.printf("당신의 점수는 %d입니다.\n", point);
+        System.out.printf("영문 학점은 %s입니다.\n", result);
+        System.out.printf("한글 학점은 %s입니다.\n", kresult);
+	}
+}
+

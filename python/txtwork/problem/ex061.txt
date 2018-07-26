@@ -1,0 +1,55 @@
+// 문자열
+
+// 문자열을 입력 받아 알파벳의 개수, 숫자의 개수, 특수문자의 개수를 계산하는 프로그램을 작성하십시오.
+
+//[입력]
+//I'm 20 years old!
+//[출력]
+//알파벳 # : 10
+//숫자 # : 2
+//특수문자 # : 5
+
+
+import java.util.Scanner;
+
+public class Main{
+
+	public static void main(String[] args) {
+
+		Scanner scanner = new Scanner(System.in);
+		String str;
+        int alp, digit, splch, i, l;
+        alp = digit = splch = i = 0;
+
+
+        System.out.println("문자열 입력 : ");
+        str = scanner.nextLine();
+        l = str.length();
+
+        /* Checks each character of string*/
+
+        while (i < l)
+        {
+            if ((str.charAt(i) >= 'a' && str.charAt(i) <= 'z') || (str.charAt(i) >= 'A' && str.charAt(i) <= 'Z'))
+            {
+                alp++;
+            }
+            else if (str.charAt(i) >= '0' && str.charAt(i) <= '9')
+            {
+                digit++;
+            }
+            else
+            {
+                splch++;
+            }
+
+            i++;
+        }
+
+        System.out.printf("알파벳 # %d\n", alp);
+        System.out.printf("숫자 # : %d\n", digit);
+        System.out.printf("특수문자 # : %d\n\n", splch);
+	}
+	
+}
+

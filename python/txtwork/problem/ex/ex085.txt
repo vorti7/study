@@ -1,0 +1,52 @@
+// 컬렉션 프레임워크
+
+// 배열 [5, 4, 0, 2, 16, 20, 60, 42, 3]를 삽입 정렬로 정렬한 결과를 출력하는 프로그램을 작성하십시오.
+
+//[결과]
+//원본 배열 :
+//5 4 0 2 16 20 60 42 3
+//정렬된 배열 :
+//0 2 3 4 5 16 20 42 60
+
+import java.util.Scanner;
+
+
+public class Main{
+
+	public static void main(String[] args) {
+
+				int[] numbers = new int[] { 5, 4, 0, 2, 16, 20, 60, 42, 3 };
+        System.out.print("\n원본 배열 :");
+        printIntegerArray(numbers);
+        System.out.print("\n정렬된 배열 :");
+        printIntegerArray(insertionSort(numbers));
+        System.out.println();
+	}
+
+	private static int[] insertionSort(int[] inputArray) {
+		// TODO Auto-generated method stub
+		for (int i = 0; i < inputArray.length - 1; i++)
+        {
+            for (int j = i + 1; j > 0; j--)
+            {
+                if (inputArray[j - 1] > inputArray[j])
+                {
+                    int temp = inputArray[j - 1];
+                    inputArray[j - 1] = inputArray[j];
+                    inputArray[j] = temp;
+                }
+            }
+        }
+        return inputArray;
+	}
+
+	private static void printIntegerArray(int[] array) {
+		// TODO Auto-generated method stub
+		for(int i : array)
+        {
+            System.out.print(i + "  ");
+        }
+	}
+
+
+}

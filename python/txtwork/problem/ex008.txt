@@ -1,0 +1,46 @@
+// 예외처리
+
+// 두 정수를 입력받고 두 번째 정수가 0일 경우 나누기를 행할 때 이에 대한 예외처리를 하면서 
+// "변수의 값이 올바르지 않습니다." 메시지와 예외객체의 메시지를 출력하는 프로그래밍을 하십시오.
+
+//[입력]
+//3
+//0
+//[출력]
+//변수의 값이 올바르지 않습니다.
+//에러 메시지 : java.lang.ArithmeticException: / by zero
+
+import java.util.Scanner;
+
+public class Main{
+
+	public static void main(String[] args) {
+        
+		int a, b;
+        int c = 0;
+
+        
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("A=");
+        a = Integer.parseInt(scanner.nextLine());
+        System.out.print("B=");
+        b = Integer.parseInt(scanner.nextLine());
+        scanner.close();
+        
+        try
+        {
+            c = a / b;
+            System.out.printf("A/B값은 %d입니다.", c);
+        }
+        catch (Exception e)
+        {
+        	System.out.println("변수의 값이 올바르지 않습니다.");
+        	System.out.printf("에러 메시지 : %s", e.toString());
+        }
+
+	}
+
+}
+
+
+

@@ -1,0 +1,12 @@
+import java.util.Scanner;
+public class Main{
+	public static void main(String[] args) {
+		String name;
+    System.out.print("당신의 이름은?:");
+    Scanner scanner = new Scanner(System.in);
+    name = scanner.nextLine();
+    scanner.close();
+    System.out.printf("Hello, %s !", name);
+	}
+}
+

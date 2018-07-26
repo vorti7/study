@@ -1,0 +1,23 @@
+import java.util.Scanner;
+public class Main{
+	public static void main(String[] args) {
+				Scanner scanner = new Scanner(System.in);
+				String str1;
+        int i, l;
+        System.out.println("문자열을 입력하세요 : ");
+        str1 = scanner.nextLine();
+        l = str1.length();
+        String[] str2 = new String[l];
+        i = 0;
+        while (i < l)
+        {
+            String tmp = Character.toString(str1.charAt(i));
+            str2[i] = tmp;
+            i++;
+        }
+        System.out.printf("원본 문자열 : %s\n", str1);
+        System.out.printf("복사 문자열 : %s\n", String.join("", str2));
+        System.out.printf("복사된 문자 수 : %d\n", i);
+	}
+}
+

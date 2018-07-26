@@ -1,0 +1,14 @@
+public class Main{
+	
+	public static void main(String[] args) {
+		System.out.println("1 ~ 20 사이의 홀수를 한 줄에 하나씩 출력하세요.");
+        for (int n = 1; n < 21; n++)
+        {
+            if (n % 2 != 0)
+            {
+            	System.out.println(n);
+            }
+        }
+	}
+}
+

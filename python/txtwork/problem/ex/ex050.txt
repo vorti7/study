@@ -1,0 +1,33 @@
+// 겍체지향 핵심
+
+// 클래스 메서드 evenOdd 를 이용해 배열 [2, 4, 7, 8, 6]의 항목 중 홀수가 있으면 true를,
+// 그렇지 않으면 false를 출력하는 프로그램을 작성하십시오.
+
+//[결과]
+//원본 배열: [2, 4, 7, 8, 6]
+//true
+
+import java.util.Arrays;
+
+public class Main{
+
+	public static void main(String[] args) {
+
+				int[] nums = { 2, 4, 7, 8, 6 };
+        System.out.printf("원본 배열: %s\n", Arrays.toString(nums));
+        System.out.println(evenOdd(nums));
+
+	}
+
+	public static boolean evenOdd(int[] nums)
+    {
+        for (int n : nums)
+        {
+            if (n % 2 != 0)
+                return true;
+        }
+        return false;
+
+    }
+
+}

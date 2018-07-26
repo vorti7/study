@@ -1,0 +1,26 @@
+import java.util.Scanner;
+public class Main{
+	public static void main(String[] args) {
+				Scanner scanner = new Scanner(System.in);
+				int i, j, r;
+        System.out.print("행의 수 (다이아몬드의 절반) :");
+        r = scanner.nextInt();
+        for (i = 0; i <= r; i++)
+        {
+            for (j = 1; j <= r - i; j++)
+                System.out.print(" ");
+            for (j = 1; j <= 2 * i - 1; j++)
+                System.out.print("*");
+            System.out.println();
+        }
+        for (i = r - 1; i >= 1; i--)
+        {
+            for (j = 1; j <= r - i; j++)
+                System.out.print(" ");
+            for (j = 1; j <= 2 * i - 1; j++)
+                System.out.print("*");
+            System.out.println();
+        }
+	}
+}
+

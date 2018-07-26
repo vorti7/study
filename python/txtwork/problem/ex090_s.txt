@@ -1,0 +1,26 @@
+import java.util.Scanner;
+public class Main{
+	public static void main(String[] args) {
+		Scanner scanner = new Scanner(System.in);
+		int cprice, sprice, plamt;
+        System.out.print("구매가를 입력하세요: ");
+        cprice = scanner.nextInt();
+        System.out.print("판매가를 입력하세요: ");
+        sprice = scanner.nextInt();
+        if (sprice > cprice)
+        {
+            plamt = sprice - cprice;
+            System.out.printf("\n당신은 %d의 이익을 보셨습니다.\n", plamt);
+        }
+        else if (cprice > sprice)
+        {
+            plamt = cprice - sprice;
+            System.out.printf("\n당신은 %d의 손해을 보셨습니다.\n", plamt);
+        }
+        else
+        {
+        	System.out.printf("\n당신은 어떠한 이익도 손해도 보지 않았습니다.\n");
+        }
+	}
+}
+

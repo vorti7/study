@@ -1,0 +1,14 @@
+public class Main{
+	public static void main(String[] args) {
+		
+		System.out.println(CenturyFromYear(2018));
+        
+	}
+	
+	public static int CenturyFromYear(int year)
+    {
+        return (int)(year / 100) + ((year % 100 == 0) ? 0 : 1);
+    }
+	
+}
+

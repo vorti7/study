@@ -1,0 +1,28 @@
+// 자바 프로그램 구조 및 데이터 타입
+
+// 다음과 같이 키보드로 입력받은 문자들을 화면에 다시 출력하는 기능을 가진 프로그램을 구현하십시오.
+
+//[입력]
+//홍길동
+//[출력]
+//Hello, 홍길동 !
+
+import java.util.Scanner;
+
+public class Main{
+
+	public static void main(String[] args) {
+
+		String name;
+
+    System.out.print("당신의 이름은?:");
+
+    Scanner scanner = new Scanner(System.in);
+    name = scanner.nextLine();
+    scanner.close();
+
+    System.out.printf("Hello, %s !", name);
+
+	}
+
+}

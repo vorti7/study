@@ -1,0 +1,48 @@
+import java.util.Scanner;
+public class Main{
+    static class Employee
+    {
+        String name;
+        DTOBirth birthDate;
+        public Employee() {
+            name = "";
+            birthDate = new DTOBirth();
+        }
+    }
+    static class DTOBirth
+    {
+        int day;
+        int month;
+        int year;
+    }
+    public static void main(String[] args) {
+        int dd = 0, mm = 0, yy = 0;
+        int total = 2;
+        Employee[] employees = new Employee[total];
+        Scanner scanner = new Scanner(System.in);
+        for (int i = 0; i < total; i++)
+        {
+            employees[i] = new Employee();
+            System.out.print("이름 : ");
+            String nm = scanner.nextLine();
+            employees[i].name = nm;
+            System.out.print("생일(년도) : ");
+            yy = Integer.parseInt(scanner.nextLine());
+            employees[i].birthDate.year = yy;
+            System.out.print("생일(월) : ");
+            mm = Integer.parseInt(scanner.nextLine());
+            employees[i].birthDate.month = mm;
+            System.out.print("생일(일) : ");
+            dd = Integer.parseInt(scanner.nextLine());
+            employees[i].birthDate.day = dd;
+            System.out.println();
+        }
+        scanner.close();
+        for (Employee emp : employees)
+        {
+            System.out.printf("%s (%d-%d-%d)\n",
+                    emp.name, emp.birthDate.year, emp.birthDate.month, emp.birthDate.day);
+        }
+    }
+}
+

@@ -1,0 +1,23 @@
+import java.util.Scanner;
+public class Main{
+	public static void main(String[] args) {
+		Scanner scanner = new Scanner(System.in);
+		String str;
+        int wrd, l;
+        System.out.println("문자열을 입력하세요 : ");
+        str = scanner.nextLine();
+        l = 0;
+        wrd = 1;
+        while (l <= str.length() - 1)
+        {
+            if (str.charAt(l) == ' ' || str.charAt(l) == '\n' || str.charAt(l) == '\t')
+            {
+                wrd++;
+            }
+            l++;
+        }
+        System.out.printf("총 단어 수 : %d\n",wrd);
+	}
+	
+}
+

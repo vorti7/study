@@ -1,0 +1,24 @@
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
+import java.util.GregorianCalendar;
+public class Main{
+    public static void main(String[] args) {
+        GregorianCalendar cal = (GregorianCalendar) Calendar.getInstance();
+        for (int year = 1995; year <= 2018; year++)
+        {
+            if (cal.isLeapYear(year))
+            {
+                System.out.printf("%d년은 윤년입니다.\n", year);
+                cal.set(year, 1, 29);
+                Date leapDay = cal.getTime();
+                cal.add(Calendar.YEAR, 1);
+                Date nextYear = cal.getTime();
+                SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+                System.out.printf("   %s으로부터 1년이 되는 날짜는 %s입니다.\n",
+                        sdf.format(leapDay), sdf.format(nextYear));
+            }
+        }
+    }
+}
+

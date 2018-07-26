@@ -1,0 +1,12 @@
+import java.util.Arrays;
+public class Main{
+	public static void main(String[] args) {
+	
+        int[] nums1 = { 1, 2, 2, 3, 3, 3, 4, 4, 5, 6, 5, 8, 9, 1 };
+        System.out.printf("nums1: %s\n", Arrays.toString(nums1));
+        int[] nums2 = { 1, 2, 2, 3, 3, 3, 4, 4, 5, 6, 5, 8, 9, 2 };
+        System.out.printf("nums2: %s\n", Arrays.toString(nums2));
+        System.out.println((nums1[0] == nums2[0]) || (nums1[nums1.length - 1] == nums2[nums2.length - 1]));
+	}
+}
+

@@ -1,0 +1,27 @@
+// 연산자
+
+// 배열 [1, 2, 2, 3, 3, 3, 4, 4, 5, 6, 5, 8, 9, 1]의 첫 번째 항목과 마지막 항목의 값이 동일하면 true, 
+// 그렇지 않으면 false를 출력하는 프로그램을 작성하십시오.
+
+//[출력]
+//true
+
+
+public class Main{
+
+	public static void main(String[] args) {
+
+		//		System.out.print
+		//		Scanner scanner = new Scanner(System.in);
+		//      Integer.parseInt(scanner.nextLine());
+		//      System.out.println
+		//      scanner.close();
+		//      System.out.printf
+
+		int[] nums = { 1, 2, 2, 3, 3, 3, 4, 4, 5, 6, 5, 8, 9, 1 };
+        System.out.println(nums.length >= 1 && (nums[0] == (nums[nums.length - 1])));
+	}
+	
+}
+
+

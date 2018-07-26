@@ -1,0 +1,37 @@
+// 컬렉션 프레임워크
+
+// 다음의 결과와 같이 밑과 지수를 입력받아 거듭제곱의 결과를 출력하는 프로그램을 작성하십시오.
+
+//[입력]
+//2
+//3
+//[결과]
+//2 ^ 3 = 8
+
+import java.util.Scanner;
+
+
+public class Main{
+
+	public static void main(String[] args) {
+
+				Scanner scanner = new Scanner(System.in);
+				int n1;
+        int exp1;
+        System.out.print("base: ");
+        n1 = scanner.nextInt();
+        System.out.print("exponent : ");
+        exp1 = scanner.nextInt();
+        System.out.printf("%d ^ %d = %d ", n1, exp1, PowerRaising(n1, exp1));
+	}
+
+	private static Object PowerRaising(int num, int exp) {
+		// TODO Auto-generated method stub
+		int rvalue = 1;
+        int i;
+        for (i = 1; i <= exp; i++)
+            rvalue = rvalue * num;
+        return rvalue;
+	}
+
+}

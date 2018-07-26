@@ -1,0 +1,6 @@
+'C#.': True
+'.NET': False
+'Hello!': False
+'Java.': True
+'Python.': True
+'etc': False

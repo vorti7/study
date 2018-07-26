@@ -1,0 +1,24 @@
+public class Main{
+	public static void main(String[] args) {
+				System.out.println(reverse_remove_parentheses("p(rq)st"));
+        System.out.println(reverse_remove_parentheses("(p(rq)st)"));
+	}
+	private static String reverse_remove_parentheses(String str) {
+		// TODO Auto-generated method stub
+		int lid = str.lastIndexOf('(');
+        if (lid == -1)
+        {
+            return str;
+        }
+        else
+        {
+            int rid = str.indexOf(')', lid);
+            return reverse_remove_parentheses(
+                  str.substring(0, lid)
+                + new String(new StringBuffer(str.substring(lid + 1, rid)).reverse())
+                + str.substring(rid + 1)
+            );
+        }
+	}
+}
+

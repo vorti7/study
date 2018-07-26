@@ -1,0 +1,28 @@
+// 자바 연산자 및 배열
+
+// 섭씨 온도(℃)를 화씨 온도(℉)로 변환하는 프로그램을 작성하십시오.
+// 섭씨온도의 화씨 온도로의 변환 공식은 섭씨온도 * 1.8 + 32입니다.
+
+//[입력]
+//30
+//[출력]
+//화씨는 86.0 도입니다.
+
+import java.util.Scanner;
+
+public class Main{
+
+	public static void main(String[] args) {
+
+				Scanner scanner = new Scanner(System.in);
+
+				System.out.print("섭씨 온도를 입력하세요: ");
+        int celsius = Integer.parseInt(scanner.nextLine());
+
+        scanner.close();
+
+        System.out.printf("화씨는 %.1f 도입니다.", (double)celsius * 18 / 10 + 32);
+
+	}
+
+}

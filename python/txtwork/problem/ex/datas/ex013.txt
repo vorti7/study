@@ -1,0 +1,16 @@
+public class Main{
+	public static void main(String[] args) {
+				int i, j;
+        int[] intArray;
+        intArray = new int[] { 1, 2, 3, 4 };
+        for (i = 0; i < 4; i++)
+        {
+            intArray[i]++;
+        }
+        for (j = 0; j < 4; j++)
+        {
+            System.out.println(intArray[j]);
+        }
+	}
+}
+

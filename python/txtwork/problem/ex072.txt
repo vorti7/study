@@ -1,0 +1,45 @@
+// 객체지향 핵심
+
+// 날짜 객체로부터 다음의 출력 결과를 얻기 위한 코드를 작성하십시오.
+
+//[결과]
+//year = 2018
+//month = 1
+//day = 2
+//hour = 3
+//minute = 57
+//second = 32
+//millisecond = 11
+
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
+import java.util.GregorianCalendar;
+public class Main{
+
+    public static void main(String[] args) {
+
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd hh:mm:ss:SS");
+        String dateStr = "2018-01-02 03:57:32:011";
+        try {
+            Date moment = sdf.parse(dateStr);
+            GregorianCalendar cal = (GregorianCalendar) Calendar.getInstance();
+            cal.setTime(moment);
+
+            System.out.println("year = " + cal.get(Calendar.YEAR));
+            System.out.println("month = " + (cal.get(Calendar.MONTH) + 1));
+            System.out.println("day = " + cal.get(Calendar.DATE));
+            System.out.println("hour = " + cal.get(Calendar.HOUR));
+            System.out.println("minute = " + cal.get(Calendar.MINUTE));
+            System.out.println("second = " + cal.get(Calendar.SECOND));
+            System.out.println("millisecond = " + cal.get(Calendar.MILLISECOND));
+
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
+
+
+    }
+
+}

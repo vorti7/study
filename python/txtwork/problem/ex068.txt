@@ -1,0 +1,43 @@
+// 문자열
+
+// 다음의 결과와 같이 입력된 문자열의 각 문자에 대해 대문자는 소문자로, 소문자는 대문자로 변환한 결과를 출력하는 프로그램을 작성하십시오.  
+
+
+//[입력]
+//A Better Tomorrow
+//[출력]
+//변환 후 : a bETTER tOMORROW
+
+
+import java.util.Scanner;
+
+public class Main{
+
+	public static void main(String[] args) {
+
+		Scanner scanner = new Scanner(System.in);
+		String str1;
+        char[] arr1;
+        int l, i;
+        l = 0;
+        char ch;
+
+        System.out.print("문자열을 입력하세요 : ");
+        str1 = scanner.nextLine();
+        l = str1.length();
+        arr1 = str1.substring(0, l).toCharArray();
+
+        System.out.print("\n변환 후 : ");
+        for (i = 0; i < l; i++)
+        {
+            ch = arr1[i];
+            if (Character.isLowerCase(ch)) 
+                System.out.print(Character.toUpperCase(ch)); 
+            else
+                System.out.print(Character.toLowerCase(ch)); 
+        }
+        System.out.println("\n");
+	}
+	
+}
+

@@ -1,0 +1,52 @@
+// 클래스의 구조
+
+// 열거형과 정적 내부 클래스를 사용해서 다음 조건을 만족하는 프로그램을 작성하십시오.
+// 학점을 열거형으로 정의합니다.학점 등급은 A(4점), B(3점), C(2점), D(1점)입니다.
+// 이름과 학과를 멤버 필드로 포함하는 내부 클래스를 정의합니다.
+//-학생의 이름과 학과 그리고 학점 등급과 학점을 출력하는 프로그램을 작성합니다.
+
+//[출력]
+//성명:홍길동
+//학과:컴퓨터공학과
+//학점:B(3)
+
+
+public class Main{
+
+	enum Point
+    {
+        D(1), C(2), B(3), A(4);
+
+        private int value;
+
+		private Point(int value) {
+			this.value = value;
+		}
+
+		public int getValue() {
+			return value;
+		}
+
+    }
+
+    static class Profile
+    {
+        String name;
+        String major;
+        Point pt;
+    }
+
+	public static void main(String[] args) {
+
+        Profile p1 = new Profile();
+        p1.name = "홍길동";
+        p1.major = "컴퓨터공학과";
+        p1.pt = Point.B;
+
+        System.out.printf("성명: %s\n", p1.name);
+        System.out.printf("학과: %s\n", p1.major);
+        System.out.printf("학점: %s(%d)", p1.pt, p1.pt.getValue());
+
+	}
+
+}

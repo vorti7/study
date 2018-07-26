@@ -1,0 +1,22 @@
+import java.util.Scanner;
+public class Main{
+	public static void main(String[] args) {
+		Scanner scanner = new Scanner(System.in);
+		int n1;
+        int exp1;
+        System.out.print("base: ");
+        n1 = scanner.nextInt();
+        System.out.print("exponent : ");
+        exp1 = scanner.nextInt();
+        System.out.printf("%d ^ %d = %d ", n1, exp1, PowerRaising(n1, exp1));
+	}
+	private static Object PowerRaising(int num, int exp) {
+		// TODO Auto-generated method stub
+		int rvalue = 1;
+        int i;
+        for (i = 1; i <= exp; i++)
+            rvalue = rvalue * num;
+        return rvalue;
+	}
+}
+

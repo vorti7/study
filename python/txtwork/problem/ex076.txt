@@ -1,0 +1,45 @@
+// 객체지향 핵심
+
+// 1995년 ~ 2018년 사이의 윤년을 출력하고 그 해 2월의 마지막 날로부터 1년이 되는 날짜를 출력하는 코드를 작성하십시오.
+
+//[출력]
+//1996년은 윤년입니다.
+//   1996-02-29년으로부터 1년이 되는 날짜는 1997-02-28입니다.
+//2000년은 윤년입니다.
+//   2000-02-29년으로부터 1년이 되는 날짜는 2001-02-28입니다.
+//2004년은 윤년입니다.
+//   2004-02-29년으로부터 1년이 되는 날짜는 2005-02-28입니다.
+//2008년은 윤년입니다.
+//   2008-02-29년으로부터 1년이 되는 날짜는 2009-02-28입니다.
+//2012년은 윤년입니다.
+//   2012-02-29년으로부터 1년이 되는 날짜는 2013-02-28입니다.
+//2016년은 윤년입니다.
+//   2016-02-29년으로부터 1년이 되는 날짜는 2017-02-28입니다.
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
+import java.util.GregorianCalendar;
+public class Main{
+
+    public static void main(String[] args) {
+
+        GregorianCalendar cal = (GregorianCalendar) Calendar.getInstance();
+
+        for (int year = 1995; year <= 2018; year++)
+        {
+            if (cal.isLeapYear(year))
+            {
+                System.out.printf("%d년은 윤년입니다.\n", year);
+                cal.set(year, 1, 29);
+                Date leapDay = cal.getTime();
+                cal.add(Calendar.YEAR, 1);
+                Date nextYear = cal.getTime();
+                SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+                System.out.printf("   %s으로부터 1년이 되는 날짜는 %s입니다.\n",
+                        sdf.format(leapDay), sdf.format(nextYear));
+            }
+        }
+
+    }
+
+}

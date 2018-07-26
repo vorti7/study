@@ -1,0 +1,27 @@
+// 자바 제어문
+
+// 배열 [1, 2, 8]을 회전한 결과를 출력하는 프로그램을 작성하십시오.
+
+//[출력]
+//원본 배열: [1, 2, 8]
+//회전 결과: [2, 8, 1]
+
+import java.util.Arrays;
+
+public class Main{
+
+	public static void main(String[] args) {
+
+				int[] nums = { 1, 2, 8 };
+        System.out.printf("원본 배열: %s\n", Arrays.toString(nums));
+        int temp = nums[0];
+        for (int i = 0; i < nums.length - 1; i++)
+        {
+            nums[i] = nums[i + 1];
+        }
+        nums[nums.length - 1] = temp;
+        System.out.printf("화전 결과: %s\n", Arrays.toString(nums));
+
+	}
+
+}

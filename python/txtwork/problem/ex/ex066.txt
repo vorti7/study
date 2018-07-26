@@ -1,0 +1,44 @@
+// java.lang 패키지
+
+// 다음의 결과와 같이 입력된 문자열, 부분 문자열의 시작 인덱스, 부분 문자열의 길이에 대해
+// 라이브러리를 사용하지 않고 직접 부분 문자열을 추출한 결과를 출력하는 프로그램을 작성하십시오.
+
+//[입력]
+//a better tomorrow
+//2
+//6
+//[출력]
+//부분 문자열 추출의 결과 :  better
+
+import java.util.Scanner;
+
+public class Main{
+
+	public static void main(String[] args) {
+
+				Scanner scanner = new Scanner(System.in);
+				String str;
+        char[] arr1;
+        int pos, l, ln, c = 0;
+
+        System.out.println("문자열을 입력하세요 : ");
+        str = scanner.nextLine();
+        ln = str.length();
+        arr1 = str.substring(0, ln).toCharArray();
+
+        System.out.println("부분 문자열 추출을 시작할 인덱스를 지정하세요 :");
+        pos = scanner.nextInt();
+
+        System.out.println("부분 문자열의 길이를 입력하세요 :");
+        l = scanner.nextInt();
+
+        System.out.print("부분 문자열 추출의 결과 : ");
+        while (c <= l)
+        {
+            System.out.print(arr1[pos + c - 1]);
+            c++;
+        }
+        System.out.print("\n\n");
+	}
+
+}

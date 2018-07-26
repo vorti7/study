@@ -1,0 +1,47 @@
+// 자바 제어문
+
+// 1~20 사이의 임의의 숫자에 대해 추측한 숫자가 큰지 작은지를 비교하면서
+// 입력해 맞추는 프로그램을 작성하시기 바랍니다.
+
+//[입력]
+//10
+//[출력]
+//10보다는 큰 숫자입니다.
+//[입력]
+//19
+//[출력]
+//19보다는 작은 숫자입니다.
+//[입력]
+//18
+//[출력]
+//정답입니다...!
+
+import java.util.Random;
+import java.util.Scanner;
+
+public class Main{
+
+	public static void main(String[] args) {
+
+		Scanner scanner = new Scanner(System.in);
+		Random random = new Random();
+        int answer = random.nextInt(21) + 1;
+
+        while (true)
+        {
+            System.out.print("숫자를 입력해주세요: ");
+            int input = scanner.nextInt();
+
+            if (input > answer) {
+                System.out.println(input + "보다는 작은 숫자입니다.");
+            } else if (input < answer) {
+            	System.out.println(input + "보다는 큰 숫자입니다.");
+            } else {
+            	System.out.println("정답입니다...!");
+                break;
+            }
+            System.out.println();
+        }
+	}
+
+}

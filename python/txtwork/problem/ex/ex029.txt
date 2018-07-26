@@ -1,0 +1,29 @@
+// java.lang 패키지
+
+//"Java는 애플리케이션 개발을 위한 객체지향 언어입니다." 문자열에서 가장 긴 단어를 찾아 출력하는 프로그램을 작성하십시오.
+
+//[출력]
+//애플리케이션
+
+
+public class Main{
+
+	public static void main(String[] args) {
+
+				String line = "Java는 애플리케이션 개발을 위한 객체지향 언어입니다.";
+        String[] words = line.split(" ");
+        String word = "";
+        int ctr = 0;
+        for (String s : words)
+        {
+            if (s.length() > ctr)
+            {
+                word = s;
+                ctr = s.length();
+            }
+        }
+
+        System.out.println(word);
+	}
+
+}

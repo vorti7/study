@@ -1,0 +1,18 @@
+import java.util.Arrays;
+public class Main{
+	
+	public static void main(String[] args) {
+		
+		int[] firstArray = { 1, 3, -5, 4 };
+        int[] secondArray = { 1, 4, -5, -2 };
+        System.out.printf("\nArray1: %s\n", Arrays.toString(firstArray));
+        System.out.printf("Array2: %s\n", Arrays.toString(secondArray));
+        System.out.println("\n배열의 곱셈 결과: ");
+        for (int i = 0; i < firstArray.length; i++)
+        {
+            System.out.print(firstArray[i] * secondArray[i] + " ");
+        }
+        System.out.println();
+	}
+}
+

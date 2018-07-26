@@ -1,0 +1,35 @@
+// 자바 제어문
+
+// 문자열을 입력하면 역순으로 문자를 출력하는 프로그램을 작성하십시오.
+
+//[입력]
+//a better tomorrow
+//[출력]
+//w o r r o m o t   r e t t e b   a 
+
+import java.util.Scanner;
+
+public class Main{
+
+	public static void main(String[] args) {
+
+		Scanner scanner = new Scanner(System.in);
+		String str;
+        int l = 0;
+
+        System.out.println("역순으로 문자를 출력할 문자열을 입력하세요 : ");
+        str = scanner.nextLine();
+
+        l = str.length() - 1;
+
+        while (l >= 0)
+        {
+            System.out.printf("%c ",str.charAt(l));
+            l--;
+        }
+        System.out.print("\n\n");
+        
+	}
+	
+}
+

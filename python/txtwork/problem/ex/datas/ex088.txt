@@ -1,0 +1,25 @@
+import java.math.BigDecimal;
+import java.util.Scanner;
+public class Main{
+	public static void main(String[] args) {
+				Scanner scanner = new Scanner(System.in);
+				BigDecimal f;
+        System.out.print("숫자를 입력하세요 : ");
+        int num = scanner.nextInt();
+        f = factorial(num);
+        System.out.printf("%d! =  %s",num, f.toString());
+	}
+	private static BigDecimal factorial(int n1) {
+		// TODO Auto-generated method stub
+		if (n1 == 0)
+        {
+            return new BigDecimal("1");
+        }
+        else
+        {
+        		BigDecimal a = new BigDecimal(n1);
+            return  a.multiply(factorial(n1 - 1));
+        }
+	}
+}
+

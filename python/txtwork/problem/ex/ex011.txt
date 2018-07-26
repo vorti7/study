@@ -1,0 +1,53 @@
+// 객체지향 핵심
+
+// 다음과 같이 변수의 값을 교환하는 swap 클래스 메서드를 참조에 의한 전달방식으로 정의히고 
+// 두 개의 정수를 엔터로 구분해 입력받아 교환 결과를 출력하는 프로그램을 작성하십시오.
+
+//[입력]
+//3
+//5
+//[출력]
+//교환 결과 입니다.
+//5 , 3
+
+import java.util.Scanner;
+
+public class Main{
+
+	static class IntegerObj {
+	    int value;
+	    IntegerObj(int val) {
+	        this.value = val;
+	    }
+			@Override
+			public String toString() {
+				return String.valueOf(value);
+			}
+
+	}
+
+	public static void main(String[] args) {
+
+				IntegerObj i, j;
+        System.out.println("두 개의 정수를 엔터로 구분해 입력하세요.");
+
+        Scanner scanner = new Scanner(System.in);
+        i = new IntegerObj(Integer.parseInt(scanner.nextLine()));
+        j = new IntegerObj(Integer.parseInt(scanner.nextLine()));
+        scanner.close();
+
+        swap(i, j);
+        System.out.println("교환 결과 입니다.");
+        System.out.printf("%s , %s", i, j);
+
+	}
+
+	public static void swap(IntegerObj a, IntegerObj b)
+  {
+        int temp;
+        temp = a.value;
+        a.value = b.value;
+        b.value = temp;
+  }
+
+}

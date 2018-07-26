@@ -1,0 +1,47 @@
+import java.util.Scanner;
+public class Main{
+	public static void main(String[] args) {
+		int[] arr = new int[] { 5, 4, 0, 2, 16, 20, 60, 42, 3 };
+        int n;
+        n = arr.length;
+        System.out.print("원본 배열 :");
+        ShowArrayElements(arr);
+        ShellSort(arr, n);
+        System.out.print("\n정렬된 배열 :");
+        ShowArrayElements(arr);
+	}
+	private static void ShellSort(int[] arr, int array_size) {
+		// TODO Auto-generated method stub
+		int i, j, inc, temp;
+        inc = 3;
+        while (inc > 0)
+        {
+            for (i = 0; i < array_size; i++)
+            {
+                j = i;
+                temp = arr[i];
+                while ((j >= inc) && (arr[j - inc] > temp))
+                {
+                    arr[j] = arr[j - inc];
+                    j = j - inc;
+                }
+                arr[j] = temp;
+            }
+            if (inc / 2 != 0)
+                inc = inc / 2;
+            else if (inc == 1)
+                inc = 0;
+            else
+                inc = 1;
+        }
+	}
+	private static void ShowArrayElements(int[] arr) {
+		// TODO Auto-generated method stub
+		for(int element : arr)
+        {
+            System.out.print(element + " ");
+        }
+		System.out.println();
+	}
+}
+

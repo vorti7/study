@@ -1,0 +1,18 @@
+import java.util.Arrays;
+public class Main{
+	public static void main(String[] args) {
+		String[] str = { "hello ", "welcome ", "to ", "C# ", "create ", ".NET ", "applications "};
+		String sumString1 = "";
+		for(String astr :str) {
+			sumString1 += astr;
+		}
+        System.out.println(sumString1);
+        Arrays.sort(str);
+        String sumString2 = "";
+				for(String astr :str) {
+					sumString2 += astr;
+				}
+        System.out.println(sumString2);
+	}
+}
+

@@ -1,0 +1,19 @@
+import java.util.Scanner;
+public class Main{
+	public static void main(String[] args) {
+		Scanner scanner = new Scanner(System.in);
+		int num, r, sum = 0, t;
+        System.out.print("숫자를 입력하세요: ");
+        num = scanner.nextInt();
+        for (t = num; num != 0; num = num / 10)
+        {
+            r = num % 10;
+            sum = sum * 10 + r;
+        }
+        if (t == sum)
+            System.out.printf("%d는 회문(palindrome) 숫자입니다.\n",t);
+        else
+            System.out.printf("%d는 회문(palindrome) 숫자가 아닙니다.\n",t);
+	}
+}
+

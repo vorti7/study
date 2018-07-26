@@ -1,0 +1,33 @@
+import java.util.Scanner;
+public class Main{
+	public static void main(String[] args) {
+		Scanner scanner = new Scanner(System.in);
+		String notes;
+        char grd;
+        System.out.print("등급을 입력하세요 :");
+        grd = scanner.next().charAt(0);
+        switch (grd)
+        {
+            case 'E':
+                notes = " Excellent";
+                break;
+            case 'V':
+                notes = " Very Good";
+                break;
+            case 'G':
+                notes = " Good ";
+                break;
+            case 'A':
+                notes = " Average";
+                break;
+            case 'F':
+                notes = " Fails";
+                break;
+            default:
+                notes = "유효하지않은 등급";
+                break;
+        }
+        System.out.printf("%s을 선택하셨습니다.\n", notes);
+	}
+}
+

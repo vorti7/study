@@ -1,0 +1,21 @@
+public class Main{
+	public static void main(String[] args) {
+		System.out.println(arrayAdjacentElementsProduct(new int[] { 2, 4, 2, 6, 9, 3 }));
+		System.out.println(arrayAdjacentElementsProduct(new int[] { 0, -1, -1, -2 }));
+	}
+	public static int arrayAdjacentElementsProduct(int[] input_array)
+    {
+        int array_index = 0;
+        int product = input_array[array_index] * input_array[array_index + 1];
+        array_index++;
+        while (array_index + 1 < input_array.length)
+        {
+            product = ((input_array[array_index] * input_array[array_index + 1]) > product) ?
+                       (input_array[array_index] * input_array[array_index + 1]) :
+                        product;
+            array_index++;
+        }
+        return product;
+    }
+}
+

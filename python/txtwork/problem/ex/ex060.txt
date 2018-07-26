@@ -1,0 +1,40 @@
+// 자바 제어문
+
+// 문자열을 입력 받아 단어 수를 계산하는 프로그램을 작성하십시오.
+// 단어는 화이트 스페이스 문자로 구분합니다.
+
+//[입력]
+//a better tomorrow
+//[출력]
+//총 단어 수 : 3
+
+import java.util.Scanner;
+
+public class Main{
+
+	public static void main(String[] args) {
+
+				Scanner scanner = new Scanner(System.in);
+				String str;
+        int wrd, l;
+
+        System.out.println("문자열을 입력하세요 : ");
+        str = scanner.nextLine();
+
+        l = 0;
+        wrd = 1;
+
+        while (l <= str.length() - 1)
+        {
+            if (str.charAt(l) == ' ' || str.charAt(l) == '\n' || str.charAt(l) == '\t')
+            {
+                wrd++;
+            }
+
+            l++;
+        }
+
+        System.out.printf("총 단어 수 : %d\n",wrd);
+	}
+
+}

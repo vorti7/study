@@ -1,0 +1,14 @@
+import java.util.Scanner;
+public class Main{
+	public static void main(String[] args) {
+		Scanner scanner = new Scanner(System.in);
+		float r;
+        float pi = 3.1415926535f;
+        System.out.println("반지름: ");
+        r = scanner.nextFloat();
+        System.out.println(pi * (r * r));
+        
+	}
+	
+}
+

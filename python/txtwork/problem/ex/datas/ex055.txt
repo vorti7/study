@@ -1,0 +1,21 @@
+import java.util.Scanner;
+public class Main{
+	public static void main(String[] args) {
+				Scanner scanner = new Scanner(System.in);
+				System.out.println("표시할 숫자를 입력하세요: ");
+        int num = scanner.nextInt();
+        System.out.println("폭을 입력하세요: ");
+        int width = scanner.nextInt();
+        int height = width;
+        for (int row = 0; row < height; row++)
+        {
+            for (int column = 0; column < width; column++)
+            {
+            	System.out.print(num);
+            }
+            System.out.println();
+            width--;
+        }
+	}
+}
+

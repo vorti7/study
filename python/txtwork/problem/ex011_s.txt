@@ -1,0 +1,38 @@
+import java.util.Scanner;
+public class Main{
+	static class IntegerObj {
+	    int value;
+	    IntegerObj(int val) {
+	        this.value = val;
+	    }
+		@Override
+		public String toString() {
+			return String.valueOf(value);
+		}
+	    
+	}
+	
+	public static void main(String[] args) {
+        
+		IntegerObj i, j;
+        System.out.println("두 개의 정수를 엔터로 구분해 입력하세요.");
+        Scanner scanner = new Scanner(System.in);
+        i = new IntegerObj(Integer.parseInt(scanner.nextLine()));
+        j = new IntegerObj(Integer.parseInt(scanner.nextLine()));
+        scanner.close();
+        
+        Swap(i, j);
+        System.out.println("교환 결과 입니다.");
+        System.out.printf("%s , %s", i, j);
+        
+	}
+	
+	public static void Swap(IntegerObj a, IntegerObj b)
+    {
+        int temp;
+        temp = a.value;
+        a.value = b.value;
+        b.value = temp;
+    }
+}
+

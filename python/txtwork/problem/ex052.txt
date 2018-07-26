@@ -1,0 +1,36 @@
+// 자바 연산자 및 배열
+
+// 클래스 메서드 ArrayAdjacentElementsProduct가 배열 [2, 4, 2, 6, 9, 3]와 [0, -1, -1, -2]에 대해 
+// 각각 인접한 항목의 곱을 구하고 그 중 최대값을 반환하는 프로그램을 작성하십시오.
+
+//[결과]
+//54
+//2
+
+public class Main{
+
+	public static void main(String[] args) {
+
+		System.out.println(ArrayAdjacentElementsProduct(new int[] { 2, 4, 2, 6, 9, 3 }));
+		System.out.println(ArrayAdjacentElementsProduct(new int[] { 0, -1, -1, -2 }));
+        
+	}
+	
+	public static int ArrayAdjacentElementsProduct(int[] input_array)
+    {
+        int array_index = 0;
+        int product = input_array[array_index] * input_array[array_index + 1];
+
+        array_index++;
+        while (array_index + 1 < input_array.length)
+        {
+            product = ((input_array[array_index] * input_array[array_index + 1]) > product) ?
+                       (input_array[array_index] * input_array[array_index + 1]) :
+                        product;
+            array_index++;
+        }
+
+        return product;
+    }
+	
+}

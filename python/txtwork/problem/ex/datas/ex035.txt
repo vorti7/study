@@ -1,0 +1,12 @@
+import java.util.Scanner;
+public class Main{
+	public static void main(String[] args) {
+				Scanner scanner = new Scanner(System.in);
+				System.out.print("16진수를 입력하세요: ");
+        String hexval = scanner.nextLine();
+        scanner.close();
+        int decValue = Integer.parseInt(hexval, 16);
+        System.out.print("10진수: " + decValue);
+	}
+}
+

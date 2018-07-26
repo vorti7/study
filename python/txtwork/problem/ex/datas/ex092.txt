@@ -1,0 +1,21 @@
+import java.util.Hashtable;
+public class Main{
+	public static void main(String[] args) {
+				IndexerTest it = new IndexerTest();
+        it.set("스포츠", "축구");
+        it.set("요리", "제빵");
+        System.out.println(it.get("스포츠"));
+        System.out.println(it.get("요리"));
+	}
+}
+class IndexerTest
+{
+    private Hashtable myHobbies = new Hashtable();
+    void set(String key, String value) {
+    	myHobbies.put(key, value);
+    }
+    String get(String key) {
+    	return (String) myHobbies.get(key);
+    }
+}
+

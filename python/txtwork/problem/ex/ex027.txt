@@ -1,0 +1,24 @@
+// java.lang 패키지
+
+// 문자열의 맨 앞과 뒤 문자를 교체하는 클래스 메서드 firstLat 메서드를 정의히고,
+// "abcdefghijklmn" 문자열과 "a"에 대해 결과를 출력하는 프로그램을 작성하십시오.
+
+//[출력]
+//nbcdefghijklma
+//a
+
+
+
+public class Main{
+
+	public static void main(String[] args) {
+
+		System.out.println(firstLast("abcdefghijklmn"));
+		System.out.println(firstLast("a"));
+	}
+
+	public static String firstLast(String str)
+    {
+        return str.length() > 1 ? str.substring(str.length() - 1) + str.substring(1, str.length() - 2) + str.substring(0, 1) : str;
+    }
+}

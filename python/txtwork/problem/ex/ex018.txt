@@ -1,0 +1,111 @@
+// 인터페이스와 패키지
+
+// 아래 4개의 인터페이스를 구현하는 Calc 클래스를 정의합니다. Calc 클래스의 객체는 double 타입의 실수 두 개를 필드로 가지며,
+// 이 필드는 사용자로부터 입력받아 초기화되며, 객체의 사칙 연산의 결과를 아래와 같이 출력하는 프로그램을 작성하십시오.
+//
+//interface IAdd
+//{
+//    double Plus();
+//}
+//interface ISub
+//{
+//    double Minus();
+//}
+//interface IMul
+//{
+//    double Mul();
+//}
+//interface IDiv
+//{
+//    double Div();
+//}
+
+//[입력]
+//10
+//4
+//[출력]
+//10.0+4.0=14.0
+//10.0-4.0=6.0
+//10.0x4.0=40.0
+//10.0/4.0=2.5
+
+
+import java.util.Scanner;
+
+public class Main{
+
+	public static void main(String[] args) {
+
+		Scanner scanner = new Scanner(System.in);
+		System.out.print("첫번째 값:");
+        double inOne = Double.parseDouble(scanner.nextLine());
+        System.out.println();
+
+        System.out.print("두번째 값:");
+        double inTwo = Double.parseDouble(scanner.nextLine());
+        System.out.println();
+
+        scanner.close();
+
+        Calc c1 = new Calc(inOne, inTwo);
+
+        System.out.printf("%.1f+%.1f=%.1f\n", inOne, inTwo, c1.Plus());
+        System.out.printf("%.1f-%.1f=%.1f\n", inOne, inTwo, c1.Minus());
+        System.out.printf("%.1fx%.1f=%.1f\n", inOne, inTwo, c1.Mul());
+        System.out.printf("%.1f/%.1f=%.1f\n", inOne, inTwo, c1.Div());
+
+	}
+
+}
+
+interface IAdd
+{
+    double Plus();
+}
+
+interface ISub
+{
+    double Minus();
+}
+
+interface IMul
+{
+    double Mul();
+}
+
+interface IDiv
+{
+    double Div();
+}
+
+class Calc implements IAdd, ISub, IMul, IDiv
+{
+    double inOne, inTwo;
+
+    public Calc(double firstValue, double secondValue)
+    {
+        inOne = firstValue;
+        inTwo = secondValue;
+    }
+
+    public double Plus()
+    {
+        return inOne + inTwo;
+    }
+
+    public double Minus()
+    {
+        return inOne - inTwo;
+    }
+
+    public double Mul()
+    {
+        return inOne * inTwo;
+    }
+
+    public double Div()
+    {
+        return inOne / inTwo;
+    }
+
+}

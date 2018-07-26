@@ -1,0 +1,26 @@
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
+import java.util.GregorianCalendar;
+public class Main{
+    public static void main(String[] args) {
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd hh:mm:ss:SS");
+        String dateStr = "2018-01-02 03:57:32:011";
+        try {
+            Date moment = sdf.parse(dateStr);
+            GregorianCalendar cal = (GregorianCalendar) Calendar.getInstance();
+            cal.setTime(moment);
+            System.out.println("year = " + cal.get(Calendar.YEAR));
+            System.out.println("month = " + (cal.get(Calendar.MONTH) + 1));
+            System.out.println("day = " + cal.get(Calendar.DATE));
+            System.out.println("hour = " + cal.get(Calendar.HOUR));
+            System.out.println("minute = " + cal.get(Calendar.MINUTE));
+            System.out.println("second = " + cal.get(Calendar.SECOND));
+            System.out.println("millisecond = " + cal.get(Calendar.MILLISECOND));
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
+    }
+}
+

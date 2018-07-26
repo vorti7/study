@@ -1,0 +1,17 @@
+import java.util.HashMap;
+import java.util.Map;
+public class Main{
+	public static void main(String[] args) {
+				Map<String, Integer> fruits = new HashMap<String, Integer>();
+        fruits.put("사과", 2);
+        fruits.put("바나나", 5);
+        fruits.put("수박", 1);
+        int quantities = 0;
+        for (int value : fruits.values())
+        {
+            quantities += value;
+        }
+        System.out.println("총 수량: "+quantities);
+	}
+}
+

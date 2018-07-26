@@ -1,0 +1,38 @@
+// 문자열
+
+// 다음의 결과와 같이 입력된 원본 문자열의 특정 문자열 앞에 문자열을 삽입해 새롭게 생성된 문자열을 출력하는 프로그램을 작성하십시오.  
+
+
+//[입력]
+//nice day
+//d
+//good 
+//[출력]
+//변경된 문자열 : nice  good day 
+
+import java.util.Scanner;
+
+public class Main{
+
+	public static void main(String[] args) {
+
+		Scanner scanner = new Scanner(System.in);
+		String str1;
+		String findstring;
+		String insertstring;
+        int i;
+
+
+        System.out.print("원본 문자열을 입력하세요 : ");
+        str1 = scanner.nextLine();
+        System.out.print("문자열을 삽입하고자 하는 문자열을 입력하세요 : ");
+        findstring = scanner.nextLine();
+        System.out.print("삽입할 문자열을 입력하세요 : ");
+        insertstring = scanner.nextLine();
+        i = str1.indexOf(findstring);  
+        insertstring = " " + insertstring.trim() + " ";
+        str1 = (new StringBuffer(str1).insert(i, insertstring)).toString();
+        System.out.printf("변경된 문자열 : %s\n\n", str1);
+	}
+	
+}

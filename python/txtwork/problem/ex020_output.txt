@@ -1,0 +1,2 @@
+Reversed 문자열:worromoT retteB A
+

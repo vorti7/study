@@ -1,0 +1,8 @@
+public class Main{
+	public static void main(String[] args) {
+        String str = "Hello";
+        System.out.printf("10칸의 공간에서 오른쪽으로 들여쓰기: %10s\n", str);
+				System.out.printf("10칸의 공간에서 왼쪽으로 들여쓰기 : %-10s\n", str);
+	}
+}
+

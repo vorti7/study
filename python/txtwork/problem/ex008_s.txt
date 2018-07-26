@@ -1,0 +1,27 @@
+import java.util.Scanner;
+public class Main{
+	public static void main(String[] args) {
+        
+		int a, b;
+        int c = 0;
+        
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("A=");
+        a = Integer.parseInt(scanner.nextLine());
+        System.out.print("B=");
+        b = Integer.parseInt(scanner.nextLine());
+        scanner.close();
+        
+        try
+        {
+            c = a / b;
+            System.out.printf("A/B값은 %d입니다.", c);
+        }
+        catch (Exception e)
+        {
+        	System.out.println("변수의 값이 올바르지 않습니다.");
+        	System.out.printf("에러 메시지 : %s", e.toString());
+        }
+	}
+}
+

@@ -1,0 +1,50 @@
+import java.util.Stack;
+public class Main{
+	public static void main(String[] args) {
+		Stack<Guest> guests = new Stack<Guest>();
+        guests.push(new Guest(25, "홍길동"));
+        guests.push(new Guest(24, "이순신"));
+        guests.push(new Guest(24, "강감찬"));
+        guests.push(new Guest(23, "을지문덕"));
+        guests.push(new Guest(26, "김유신" ));
+        guests.push(new Guest(27, "김춘추" ));
+        System.out.print("손님이 꽉 찾습니다:\n");
+        for (Guest guest : guests)
+        {
+            System.out.printf("%s, %d\n", guest.getName(), guest.getAge());
+        }
+        System.out.println();
+        Guest firstToLeave = guests.pop();
+        System.out.printf("첫 번째 손님이 떠났습니다: %s\n", firstToLeave.getName());
+        System.out.print("남아있는 손님 목록:\n");
+        for (Guest guest : guests)
+        {
+            System.out.printf("%s, %d\n", guest.getName(), guest.getAge());
+        }
+        Guest soonToLeave = guests.peek();
+        System.out.printf("다음 떠날 차례의 손님 : %s\n", soonToLeave.getName());
+	}
+}
+class Guest
+{
+    private int age;
+	private String name;
+	public Guest(int age, String name) {
+		// TODO Auto-generated constructor stub
+    	this.age = age;
+    	this.setName(name);
+	}
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public int getAge() {
+		return age;
+	}
+	public void setAge(int age) {
+		this.age = age;
+	}
+}
+

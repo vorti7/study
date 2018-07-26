@@ -1,0 +1,29 @@
+public class Main{
+	
+	public static void main(String[] args) {
+        
+		Coord3D c1 = new Coord3D(3, 4, 7);
+        System.out.printf("초기좌표값: (%d,%d,%d)\n", c1.x, c1.y, c1.z);
+        System.out.println("좌표이동:(+3,-5,+1)");
+        c1.move(3, -5, 1);
+        System.out.printf("변경후 좌표값: (%d,%d,%d)\n", c1.x, c1.y, c1.z);
+        
+	}
+}
+class Coord3D
+{
+    public int x, y, z;
+    public Coord3D(int x, int y, int z)
+    {
+        this.x = x;
+        this.y = y;
+        this.z = z;
+    }
+    public void move(int x, int y, int z)       
+    {
+        this.x = this.x + x;
+        this.y = this.y + y;
+        this.z = this.z + z;
+    }
+}
+

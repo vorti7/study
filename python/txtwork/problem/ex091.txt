@@ -1,0 +1,35 @@
+// 자바 제어문
+
+// 다음의 결과와 같이 입력된 섭씨 기온를 통해 날씨의 상태를 나타내는 프로그램을 작성하십시오.
+
+//[입력]
+//20
+//[출력]
+//따뜻한 날씨입니다.
+
+import java.util.Scanner;
+
+
+public class Main{
+
+	public static void main(String[] args) {
+
+		Scanner scanner = new Scanner(System.in);
+		int tmp;
+        System.out.print("기온을 입력하세요 : ");
+        tmp = scanner.nextInt();
+        if (tmp < 0)
+        	System.out.print("얼어 죽겠어요.\n");
+        else if (tmp < 5)
+        	System.out.print("추운 날씨입니다.\n");
+        else if (tmp < 15)
+        	System.out.print("선선한 날씨입니다.\n");
+        else if (tmp < 25)
+        	System.out.print("따뜻한 날씨입니다.\n");
+        else if (tmp < 35)
+        	System.out.print("덥네요.\n");
+        else
+        	System.out.print("무지 덥네요.\n");
+	}
+
+}

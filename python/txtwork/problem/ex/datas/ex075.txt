@@ -1,0 +1,21 @@
+import java.util.Calendar;
+public class Main{
+	public static void main(String[] args) {
+				final int July = 7;
+        final int Feb = 2;
+        Calendar cal = Calendar.getInstance();
+        cal.set(Calendar.YEAR, 2018);
+        cal.set(Calendar.MONTH, July-1);
+        int daysInJuly = cal.getActualMaximum(Calendar.DAY_OF_MONTH);
+        System.out.println(daysInJuly);
+        cal.set(Calendar.YEAR, 2013);
+        cal.set(Calendar.MONTH, Feb-1);
+        int daysInFeb = cal.getActualMaximum(Calendar.DAY_OF_MONTH);
+        System.out.println(daysInFeb);
+        cal.set(Calendar.YEAR, 2004);
+        cal.set(Calendar.MONTH, Feb-1);
+        int daysInFebLeap = cal.getActualMaximum(Calendar.DAY_OF_MONTH);
+        System.out.println(daysInFebLeap);
+	}
+}
+

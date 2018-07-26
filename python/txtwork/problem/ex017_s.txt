@@ -1,0 +1,51 @@
+public class Main{
+	
+	public static void main(String[] args) {
+        
+		Salesman s1 = new Salesman("홍길동", "영업부", Gender.Male, 20);
+        s1.display();
+        s1.whoAmI();
+        
+	}
+}
+enum Gender
+{ 
+	Male, Female
+}
+class Employee
+{
+    String name, dept;
+    Gender sex;
+    int age;
+    public Employee(String inName, String inDept, Gender inSex, int inAge)
+    {
+        name = inName;
+        dept = inDept;
+        sex = inSex;
+        age = inAge;
+    }
+    public void display()    
+    {
+        System.out.printf("성명: %s\n", name);
+        System.out.printf("성별: %s\n", sex);
+        System.out.printf("나이: %d\n", age);
+        System.out.printf("부서: %s\n", dept);
+    }
+    public  void whoAmI() 
+    {
+        System.out.println("직원입니다.");
+    }
+}
+class Salesman extends Employee
+{
+    public Salesman(String inName, String inDept, Gender inSex, int inAge)
+    {
+    	super(inName, inDept, inSex, inAge);
+    }
+    @Override
+    public void whoAmI()   
+    {
+        System.out.println("영업직원입니다.");
+    }
+}
+

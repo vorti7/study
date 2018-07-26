@@ -1,0 +1,36 @@
+import java.util.Scanner;
+public class Main{
+	public static void main(String[] args) {
+				System.out.print("문자열입력:");
+				Scanner scanner = new Scanner(System.in);
+        String inPut = scanner.nextLine();
+        System.out.println();
+        scanner.close();
+        Reverse r1 = new Reverse(inPut);
+        System.out.printf("Reversed 문자열: %s\n", r1.outValue);
+	}
+}
+class Reverse
+{
+    char[] inValue;
+    public String outValue;
+    public Reverse(String inStr)
+    {
+        inValue = new char[inStr.length()];
+        outValue = "";
+        for (int i = 0; i < inStr.length(); i++)
+        {
+            inValue[i] = inStr.charAt(i);
+        }
+        doReverse(inValue);
+    }
+    public void doReverse(char[] inValue)
+    {
+        int length = inValue.length;
+        for (int i = 0; i < length; i++)
+        {
+            this.outValue = this.outValue + inValue[length - 1 - i];
+        }
+    }
+}
+

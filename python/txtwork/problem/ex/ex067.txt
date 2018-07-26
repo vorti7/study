@@ -1,0 +1,33 @@
+// java.lang 패키지
+
+// 다음의 결과와 같이 입력된 문자열, 부분 문자열에 대해 부분 문자열의 포함 여부를 출력하는 프로그램을 작성하십시오.
+
+//[입력]
+//a better tomorrow
+//better
+//[출력]
+//부분 문자열이 존재합니다.
+
+import java.util.Scanner;
+
+public class Main{
+
+	public static void main(String[] args) {
+
+				Scanner scanner = new Scanner(System.in);
+				String str1, str2;
+        boolean m;
+
+        System.out.println("문자열을 입력하세요 : ");
+        str1 = scanner.nextLine();
+
+        System.out.print("찾고자하는 부분 문자열을 입력하세요 : ");
+        str2 = scanner.nextLine();
+        m = str1.contains(str2);
+        if (m)
+            System.out.print("부분 문자열이 존재합니다.\n\n");
+        else
+            System.out.print("부분 문자열이 존재하지 않습니다. \n\n");
+	}
+
+}
